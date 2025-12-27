@@ -25,22 +25,6 @@
 
 <script>
 
-if (window.location.protocol === 'file:') {
-  document.body.innerHTML = `
-    <div class="wrap">
-      <h2 style="color:#ff6b6b;">你现在是用 file:// 打开的</h2>
-      <p>这会导致浏览器禁止把本地图片画到 canvas。</p>
-      <p><b>请用本地服务器打开:</b></p>
-      <p class="muted">终端运行：</p>
-      <pre style="background:rgba(255,255,255,0.08);padding:12px;border-radius:10px;overflow:auto;">cd "/Users/aoeo/Desktop/读书读书我要读书/大三上/认知与行为实验技术/Waldo"
-python3 -m http.server 8000</pre>
-      <p class="muted">然后浏览器打开：</p>
-      <p><code>http://localhost:8000/Whaldo_ref.html</code></p>
-    </div>
-  `;
-  throw new Error('Opened via file://; please use http://localhost...');
-}
-
 const BASE = "https://cdn.jsdelivr.net/gh/Iswull/Find-Waldo@83a2f2c/";
 
 const STIM = [
