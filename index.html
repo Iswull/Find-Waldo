@@ -122,15 +122,16 @@ jsPsych.data.addProperties({
 
 });
 
-// 预加载所有图片
 const preload = {
   type: jsPsychPreload,
   images: STIM.flatMap(s => [s.present, s.absent]),
   message: `
     <div class="wrap">
-      <p>正在加载实验图片…</p>
-      <p class="muted">若失败：检查 <code>Waldo_try/</code> 是否与本 html 同级，以及文件名是否完全一致。</p>
-      <p class="muted">并确保你是用 <code>http://localhost...</code> 打开，而不是 file://。</p>
+      <p>正在加载实验图片，请稍候……</p>
+      <p class="muted">
+        图片较多，加载时间可能需要几十秒。
+        <br>请保持网络连接，不要刷新页面。
+      </p>
     </div>
   `
 };
